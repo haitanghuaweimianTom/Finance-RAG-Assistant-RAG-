@@ -74,14 +74,18 @@ def rerank_chunks(query, docs, top_n=3):
         return docs[:top_n] # 失败则退回到普通检索结果
 
 def build_prompt(query, relevant_docs):
-    """ 第三步：构造 Prompt """
+    """ 构造Prompt """
     context = "\n\n".join([f"【资料{i+1}】: {doc}" for i, doc in enumerate(relevant_docs)])
+    # 完整且无重复的Prompt构造
     prompt = f"""你是一位专业的金融分析师。请基于以下研报片段回答问题。
 若资料不足，请直说。
-
+格式要求：
+1. 所有数学公式（如估值模型、统计公式、计算公式等）必须使用LaTeX语法表示：
+   - 行内公式用 $包裹（例：$PE = 股价/每股收益$）
+   - 块级公式用 $$包裹（例：$$DCF = \sum_{{t=1}}^n \frac{{CF_t}}{{(1+r)^t}}$$）
+2. 保持回答的专业性和可读性，公式与文字自然衔接。
 资料库：
 {context}
-
 问题：{query}
 回答："""
     return prompt
