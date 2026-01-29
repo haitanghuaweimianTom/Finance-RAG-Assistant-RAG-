@@ -1,0 +1,18 @@
+# 隐私文件 (绝对不能上传)
+.env
+
+# 虚拟环境 (太大了，用户自己生成)
+venv/
+
+# 数据库和缓存 (用户自己生成)
+chroma_db/
+__pycache__/
+.ipynb_checkpoints/
+
+# 临时数据文件夹
+chunks/
+clean_texts/
+data-rawpdf/*
+
+# 忽略除了 .gitkeep 以外的所有 PDF (可选)
+# 如果你想放一个示例 PDF，就不要写这一行

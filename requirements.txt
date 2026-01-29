@@ -1,0 +1,7 @@
+openai
+chromadb
+pdfplumber
+tqdm
+streamlit
+requests
+python-dotenv
