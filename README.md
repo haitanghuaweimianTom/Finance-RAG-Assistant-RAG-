@@ -4,7 +4,7 @@
 [![API](https://img.shields.io/badge/LLM-Qwen2.5--7B--Instruct-orange.svg)](https://siliconflow.cn/)
 [![Framework](https://img.shields.io/badge/Framework-Streamlit-red.svg)](https://streamlit.io/)
 
-** 结合金融业务洞察（Domain Knowledge）与大模型 RAG 技术，专为券商研报深度解读设计的智能工具。
+** 结合金融业务洞察（Domain Knowledge）与大模型 RAG 技术 **，专为券商研报深度解读设计的智能工具。
 
 ---
 
@@ -82,3 +82,4 @@ SILICONFLOW_API_KEY=你的硅基流动API_KEY
 ## 🤝 贡献与反馈
 欢迎通过 Issue 或 Pull Request 为本项目做出贡献。
 项目作者：[haitanghuaweimianTom](https://github.com/haitanghuaweimianTom)
+
